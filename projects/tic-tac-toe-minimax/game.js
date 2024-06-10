@@ -30,7 +30,10 @@ const init = () => {
 				if (!checkWinner(game, humanPlayer) && !checkWinner(game, computerPlayer)) {
 					mark(el, humanPlayer);
 					if (!checkWinner(game, humanPlayer)) {
-						computer();
+						setTimeout(() => {
+                            computer();
+                            checkGameEnd();
+                        }, 750);
 					}
 				} 
                 checkGameEnd();
